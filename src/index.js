@@ -26,10 +26,10 @@ app.use(require('./routes/index'));
 // Archivos publicos accedidos desde el navegador -img, videos, pdf, etc
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+process.env.PORT
 
 //la llamamos en un puerto especifico
-app.listen(app.get('port'), () => {
+app.listen(app.get('process.env.PORT || 4000'), () => {
 	console.log('Server on port', app.get('port'));
 });
 
