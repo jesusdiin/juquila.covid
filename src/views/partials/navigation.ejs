@@ -1,0 +1,29 @@
+ <div class="navbar-fixed">
+
+	<nav class="teal">
+		<div class="container nav-wrapper">
+			<a href="/" class="brand-logo">Logo</a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/acerca-de">Acerca de</a></li>
+				<li><a href="/datos">Datos</a></li>
+				<li><a href="/api">API</a></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+  <ul class="sidenav" id="mobile-demo">
+	<li><a href="/">Inicio</a></li>
+	<li><a href="/acerca-de">Acerca de</a></li>
+	<li><a href="/datos">Datos</a></li>
+	<li><a href="/api">API</a></li>
+  </ul>
+
+  <script>
+  // Or with jQuery
+
+  $(document).ready(function(){
+	$('.sidenav').sidenav();
+  });
+  </script>

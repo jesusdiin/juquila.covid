@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title><%= title%></title>
+		<meta charset="utf-8">
+
+		<% include partials/head.ejs %>
+	</head>
+
+
+	<body>
+    <% include partials/navigation.ejs %>
+     
+
+    <div class="container welcome">
+        <div class="row">
+            <div class="col m 12">
+                <h1>Bienvenido...</h1>
+                <span class="sectionWel">En este sitio encontrarás información</span>
+                <br>
+                <span class="sectionWel">detallada sobre el </span><span class="sectionWel welcome-covid">covid-19 en Juquila</span>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+    <!-- SECTION ONE -->
+
+    <div class="container datos z-depth-5">
+        <div class="row">
+            <div class="col s12 m12 l12" id="fechaActualizacion">
+                <h4>Fecha de actualización:</h4>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="z-depth-5 card-datos" id="casosPositivos">
+                    <h5>Casos positivos:</h5>
+                    <span></span>
+                </div>
+            </div>            
+            <div class="col s12 m4 l4">
+                <div class="z-depth-5 card-datos">
+                    
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="z-depth-5 card-datos">
+                    
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="z-depth-5 card-datos">
+                    
+                </div>
+            </div>           
+        </div>
+    </div>
+
+    <% include partials/footer.ejs%>
+
+
+
+	</body>
+</html>

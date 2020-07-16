@@ -1,0 +1,71 @@
+body {
+	background: url(../img/wave.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+    background-color: #f3f4f5;
+	background-attachment: fixed;
+	background-position: 0px 56px;
+}
+
+.background-color-primary {
+	background: #00cba9;
+}
+
+
+/* ------------------ HOME -----------*/
+/* ========== welcome ==========*/
+.welcome{
+height: 100vh;
+}
+
+.welcome-covid{
+	color: #00cba9;
+}
+
+.text-color-primary {
+	color: #00cba9;
+}
+
+.sectionWel{
+	font-size: 2.5em;
+}
+
+/* ------------------ HOME -----------*/
+/* ========== datos ==========*/
+
+.datos{
+	height: 100vh;/*
+	background: url(../img/wave3.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-color: #fff;*/
+	border-radius: 13px;
+}
+
+.card-datos {
+	background: url(../img/wave4.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+	background-color: #fff;
+	height: 100px;
+	width: 85%;
+	border-radius: 10px;
+	margin-top: 15px !important;
+	display: flex;
+	margin: auto;
+}
+
+
+
+/* ------------------ HOME -----------*/
+/* ========== welcome ==========*/
+.background{
+		background: url(../img/wave2.svg) !important;
+		background-size: 100% !important;
+		background-repeat: no-repeat !important;
+		height: 10.5vh;
+}
+.footer-background{
+    background-color: teal !important;
+}
