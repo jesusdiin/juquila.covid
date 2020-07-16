@@ -7,7 +7,7 @@ const path = require('path');
 
 //Settings
 //puerto en ejecucuion
-app.set('port', 80);
+app.set('port', 443);
 //DEclaramos la ruta src para usarlos con render
 app.set('views', path.join(__dirname, 'views'));
 
