@@ -6,17 +6,17 @@ const router = express.Router();
 router.get('/', (req, res) => {
     //Otorgamos title to the page dinámicmente
     //clase titulo
-    res.render('index', { title: 'El Druida' });
+    res.render('index', { title: 'COVID-19' });
 //Muestra la direccion en pantalla, evita error con win y linux
 //console.log(path.join(__dirname, 'views/index.html'));
 });
 
-router.get('/contact', (req, res) => {
-    res.render('contact', { title: 'Contacto' });
+router.get('/acerca-de', (req, res) => {
+    res.render('acerca-de', { title: 'Acerca de' });
 });
 
-router.get('/productos', (req, res) => {
-    res.render('productos', { title: 'Productos' });
+router.get('/datos', (req, res) => {
+    res.render('datos', { title: 'Datos' });
 });
 
 module.exports = router;
