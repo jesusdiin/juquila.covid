@@ -7,7 +7,7 @@ const path = require('path');
 
 //Settings
 //puerto en ejecucuion
-app.set('port', 4000);
+app.set('port', process.env.PORT || 8080);
 //DEclaramos la ruta src para usarlos con render
 app.set('views', path.join(__dirname, 'views'));
 
@@ -26,10 +26,10 @@ app.use(require('./routes/index'));
 // Archivos publicos accedidos desde el navegador -img, videos, pdf, etc
 app.use(express.static(path.join(__dirname, 'public')));
 
-process.env.PORT
+
 
 //la llamamos en un puerto especifico
-app.listen(app.get('process.env.PORT || 4000'), () => {
+app.listen(app.get('port'), () => {
 	console.log('Server on port', app.get('port'));
 });
 
