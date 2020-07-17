@@ -1,6 +1,6 @@
 
 
-    fetch("js/covid.json")
+    fetch("http://34.206.10.91/public/covid/data.json")
     .then(function(resp){
         return resp.json();
     })
