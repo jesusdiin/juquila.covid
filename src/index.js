@@ -20,6 +20,7 @@ app.set('view engine', 'ejs');
 
 //Rutas del servidor
 app.use(require('./routes/index'));
+app.use('/api/v1/data', require('./api/index'));
 
 
 // Archivos estaticos

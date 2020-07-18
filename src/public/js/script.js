@@ -1,6 +1,16 @@
+/*
+let url = 'http://localhost/covid/api/v1/data';
 
-
-    const data = 'http://34.206.10.91/public/covid/data.json';
+fetch(url)
+.then(res => res.json())
+.then((out) => {
+  console.log('json', out);
+})
+.catch(err => { throw err });
+*/
+/*
+    fetch("http://localhost/covid/api/v1/data")
+    
     .then(function(resp){
         return resp.json();
     })
@@ -18,5 +28,4 @@
                     $(tblRow).appendTo("#casosPositivos");
       
     });
-
-    
+/*

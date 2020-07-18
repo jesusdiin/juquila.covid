@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-"web": "node src/index.js",
+    "web": "node src/index.js",
     "dev": "nodemon src"
   },
   "keywords": [],
@@ -15,6 +15,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "morgan": "^1.9.1",
+    "node-fetch": "^2.6.0",
     "now": "^14.0.3",
     "now-cli": "0.0.0"
   },
