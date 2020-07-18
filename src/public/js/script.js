@@ -1,6 +1,6 @@
 
 //fetch("http://10.42.0.1:8080/api/v1/data")
-fetch("https://juquila-covid.herokuapp.com/api/v1/data")
+fetch("http://juquila.info/api/v1/data")
 	.then(function(resp){
 			return resp.json();
 	})
