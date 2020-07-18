@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 
-// DATA
+// DATA COVID
 const fetch = require('node-fetch');
 
 router.get('/', async (req, res) => {
