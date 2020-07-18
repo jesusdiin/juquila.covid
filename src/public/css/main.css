@@ -1,3 +1,9 @@
+/**  TIPOGRAFÍAS  **/
+@font-face {
+	font-family: Roboto_Slab;
+	src: url(../fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
+}
+
 body {
 	background: url(../img/wave.svg);
 	background-repeat: no-repeat;
@@ -34,26 +40,80 @@ height: 100vh;
 /* ========== datos ==========*/
 
 .datos{
-	height: 100vh;/*
+	/*height: 100vh;
 	background: url(../img/wave3.svg);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-color: #fff;*/
+	padding-top: 15px !important;
 	border-radius: 13px;
+	padding-bottom: 10px !important;
 }
 
+.title-municipio{
+	font-weight: 800;
+	font-size: 25px;
+}
+h4 {
+	font-weight: 900;
+	font-size: 30px;
+}
 .card-datos {
-	background: url(../img/wave4.svg);
+	background: url(../img/wav4.svg);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: bottom;
-	background-color: #fff;
+	background-color: #f3f4f5;
 	height: 100px;
 	width: 85%;
 	border-radius: 10px;
 	margin-top: 15px !important;
 	display: flex;
 	margin: auto;
+	color: #000;
+}
+
+.card-datos:hover{
+	width: 90%;
+}
+
+.card-datos span {
+	font-size: 20px;
+	font-weight: 900;
+	font-family: Roboto_Slab;
+}
+
+.total {
+	font-size: 15px !important;
+	font-weight: 700 !important;
+}
+
+.title-card{
+	margin: auto;
+}
+
+.content-card{
+	margin: auto;
+}
+
+#casosAnalizados:hover {
+	color: #fff;
+	background-color: #ff5252;
+}
+
+#casosPositivos:hover {
+	color: #fff;
+	background-color: #ff5252;
+}
+
+#casosNegativos:hover {
+	color: #fff;
+	background-color: #ff5252;
+}
+
+#casosSospechosos:hover {
+	color: #fff;
+	background-color: #ff5252;
 }
 
 
