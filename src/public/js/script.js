@@ -1,6 +1,7 @@
 
 //fetch("http://10.42.0.1:8080/api/v1/data")
-fetch("http://www.juquila.info/api/v1/data")
+fetch("https://www.juquila.info/api/v1/data")
+//fetch("http://10.42.0.1:8080/public/js/moment.min.js")
 	.then(function(resp){
 			return resp.json();
 	})
@@ -8,6 +9,18 @@ fetch("http://www.juquila.info/api/v1/data")
 
 		.then(function(data){
 			//console.log(data);
+
+			// --- Fecha actualización
+			const findFecha = data.find(item => {
+				return item.FECHA_ACTUALIZACION > '1'
+			});
+			const fechaActualizacion = findFecha.FECHA_ACTUALIZACION
+			console.log('Fecha de actualización: ' + fechaActualizacion);
+			fechaActualizacionStr=JSON.stringify(Object.keys(fechaActualizacion));
+				var tblRow = "<span>" + fechaActualizacion + "</span>"
+					$(tblRow).appendTo("#fechaActualizacion");
+			
+
 			// --- Total de datos analizados
 			console.log("Total de datos analizados: " + Object.keys(data).length);
 			totalDatosStr=JSON.stringify(Object.keys(data).length);
@@ -55,5 +68,17 @@ fetch("http://www.juquila.info/api/v1/data")
 						var tblRow = "<span>" + defuncionesStr + "</span>"
 							$(tblRow).appendTo("#printDefunciones");
 			
+
+			// --- Activos
+			/*var activos = positivoxMunicipio.filter(item =>{
+				if (moment().format('YYYY MM DD').diff(moment(activos.FECHA_SINTOMAS)) < 14){
+					return item.FECHA_SINTOMAS
+				} else {
+					console.log('nqaa')
+				}*/
+				//return item.FECHA_SINTOMAS  moment().format().diff(moment(activos.FECHA_SINTOMAS))<14;
+			//});
+			//console.log(activos);
+			//console.log(moment().format('YYYY MM DD'))
 			
 		});

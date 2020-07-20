@@ -14,6 +14,7 @@
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "moment": "^2.27.0",
     "morgan": "^1.9.1",
     "node-fetch": "^2.6.0",
     "now": "^14.0.3",

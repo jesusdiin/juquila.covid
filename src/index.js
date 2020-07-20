@@ -20,8 +20,14 @@ app.set('view engine', 'ejs');
 
 //Rutas del servidor
 app.use(require('./routes/index'));
-//API
+
+// ---- API
 app.use('/api/v1/data', require('./api/index'));
+app.use('/api/v1/data/positivos', require('./api/positivos'));
+app.use('/api/v1/data/negativos', require('./api/negativos'));
+app.use('/api/v1/data/sospechosos', require('./api/sospechosos'));
+app.use('/api/v1/data/defunciones', require('./api/defunciones'));
+
 
 
 // Archivos estaticos
@@ -34,5 +40,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.listen(app.get('port'), () => {
 	console.log('Server on port', app.get('port'));
 });
+
 
 //app.use('/public',express.static(path.join(__dirname, '../public')));

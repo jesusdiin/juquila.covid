@@ -19,4 +19,9 @@ router.get('/datos', (req, res) => {
     res.render('datos', { title: 'Datos' });
 });
 
+router.get('/api', (req, res) =>{
+    res.render('api', { title: 'Rest API'});
+})
+
+
 module.exports = router;
