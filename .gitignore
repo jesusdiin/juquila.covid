@@ -3,3 +3,6 @@ node_modules
 covid.json
 contact.ejs
 welcome.svg
+defunciones.js
+positivos.js
+sospechosos.js

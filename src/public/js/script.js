@@ -1,6 +1,8 @@
 
-//fetch("http://10.42.0.1:8080/api/v1/data")
-fetch("https://www.juquila.info/api/v1/data")
+
+
+fetch("http://10.42.0.1:8080/api/v1/data")
+//fetch("https://www.juquila.info/api/v1/data")
 //fetch("http://10.42.0.1:8080/public/js/moment.min.js")
 	.then(function(resp){
 			return resp.json();
@@ -70,15 +72,54 @@ fetch("https://www.juquila.info/api/v1/data")
 			
 
 			// --- Activos
-			/*var activos = positivoxMunicipio.filter(item =>{
-				if (moment().format('YYYY MM DD').diff(moment(activos.FECHA_SINTOMAS)) < 14){
-					return item.FECHA_SINTOMAS
-				} else {
-					console.log('nqaa')
-				}*/
-				//return item.FECHA_SINTOMAS  moment().format().diff(moment(activos.FECHA_SINTOMAS))<14;
-			//});
-			//console.log(activos);
+			var activos = positivoxMunicipio.filter(item =>{
+					return item.FECHA_SINTOMAS < '9999-99-99'
+			});
+			const fechaaa = activos.FECHA_SINTOMAS;
+			console.log(activos);
+
+			//const fechaActualizacion = findFecha.FECHA_ACTUALIZACION
+			//console.log('Fecha de actualización: ' + fechaActualizacion);
 			//console.log(moment().format('YYYY MM DD'))
+
+
+			// ---- Mostrar datos a detalle 
+			//var aDettalle = document.querySelector(#dAdetalle);
+			this.detalle = detalle =>{
+				//console.log(positivoxMunicipio);
+				fTabla(positivoxMunicipio);
+			}
+			 function fTabla(positivoxMunicipio){
+				//console.log(positivoxMunicipio);
+				//datosAdetalle.innerHTML = 'hi'
+				for(let aDetalleValor of positivoxMunicipio){
+					console.log('ID: ' + aDetalleValor.ID_REGISTRO);
+					/*
+						VARIABLE SEXO
+						- 1 = Femenino
+						- 2 = Masculino
+					*/
+					var sexo = aDetalleValor.SEXO;
+					var fechaDefuncion = aDetalleValor.FECHA_DEF;
+					datosAdetalle.innerHTML += `
+						<tr>
+							<td>${aDetalleValor.ID_REGISTRO}</td>
+							<td>${aDetalleValor.EDAD + ' años'}</td>
+							<td>${sexo < 2 ? "Femenino" : "Masculino"}</td>
+							<td>${aDetalleValor.FECHA_SINTOMAS}</td>
+							<!--<td>${aDetalleValor.FECHA_INGRESO}</td>-->
+							<td>${fechaDefuncion >= '9999-99-99' ? "No Aplica" : fechaDefuncion }</td>
+						</tr>
+					`
+					
+				}
+			 }
+			
+			
 			
 		});
+		console.log(detalle);
+
+		function ocultar(){
+			datosAdetalle.innerHTML= '';
+		}

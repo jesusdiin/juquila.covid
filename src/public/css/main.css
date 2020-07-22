@@ -1,7 +1,28 @@
+/* TEmporal */
+.temp{
+	height: 60vh;
+}
+
+
 /**  TIPOGRAFÍAS  **/
 @font-face {
 	font-family: Roboto_Slab;
 	src: url(../fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
+}
+
+/*  boton compartir */
+.boton-compartir {
+	position: fixed;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	font-size: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	right: 1em;
+	bottom: 1em;
 }
 
 body {
@@ -54,6 +75,12 @@ height: 100vh;
 	font-weight: 800;
 	font-size: 25px;
 }
+
+.resumen-title{
+	width: 85%;
+	margin: auto !important;
+}
+
 h4 {
 	font-weight: 900;
 	font-size: 30px;
@@ -98,7 +125,7 @@ h4 {
 
 #casosAnalizados:hover {
 	color: #fff;
-	background-color: #ff5252;
+	background-color: #00838f;
 }
 
 #casosPositivos:hover {
@@ -108,12 +135,17 @@ h4 {
 
 #casosNegativos:hover {
 	color: #fff;
-	background-color: #ff5252;
+	background-color: #00c853;
 }
 
 #casosSospechosos:hover {
 	color: #fff;
-	background-color: #ff5252;
+	background-color: #ff6d00;
+}
+
+#Defunciones:hover {
+	color: #fff;
+	background-color: #212121;
 }
 
 
@@ -135,4 +167,25 @@ h4 {
 .content-api{
 	margin-top: 15px;
 	border-radius: 12px;
+}
+
+.datosAdetalle {
+	border-radius: 10px;
+}
+
+
+/** =========== SECTION API ============== */
+
+.subtitles-api-h6 {
+	font-size: 2em;
+	color: #00bcd4;
+	font-weight: 500;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.subtitles-api-span {
+	color: #000;
+	font-size: 1.3em;
+	font-weight: 900;
+	font-family: monospace;
 }

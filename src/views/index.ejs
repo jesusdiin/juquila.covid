@@ -11,7 +11,28 @@
 
 	<body>
     <% include partials/navigation.ejs %>
-     
+
+    <!--btn share-->
+    <a href="https://www.juquila.info" class="sharing boton-compartir">
+        <i class="material-icons">share</i>
+    </a>
+    <script>
+        /**** Scirpt share */
+        if(navigator.share){
+            document.querySelectorAll("a.sharing").forEach(el => {
+                el.addEventListener("click",function(ev){
+                    ev.preventDefault();
+
+                    const url = this.href;
+                    navigator.share({
+                        title: "Juquila.info",
+                        url: url
+                    });
+                    return false;
+                })
+            })
+        }
+    </script>
 
     <div class="container welcome">
         <div class="row">
@@ -20,6 +41,9 @@
                 <span class="sectionWel">En este sitio encontrarás información</span>
                 <br>
                 <span class="sectionWel">detallada sobre el </span><span class="sectionWel welcome-covid">covid-19 en Juquila</span>
+                <!--<div class="div-img">
+                    <img class="responsive-img" src="/img/Juquila-Covid.jpeg" alt="Banner covid-19 en Juquila">
+                --></div>
             </div>
         </div>
     </div>
@@ -27,6 +51,7 @@
     
 
     <% include partials/sectionDatos.ejs%>
+    <% include partials/datosAdetalle.ejs%>
 
     
 
