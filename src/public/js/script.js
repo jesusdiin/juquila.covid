@@ -1,8 +1,8 @@
 
 
 
-//fetch("http://10.42.0.1:8080/api/v1/data")
-fetch("https://www.juquila.info/api/v1/data")
+fetch("/api/v1/data")
+//fetch("https://www.juquila.info/api/v1/data")
 //fetch("http://10.42.0.1:8080/public/js/moment.min.js")
 	.then(function(resp){
 			return resp.json();
