@@ -5,7 +5,7 @@ const fs = require("fs");
 
 
 
-csvToJson().fromFile("covidFiltradoxMunucupio.csv").then(source =>{
+csvToJson().fromFile("covidFiltradoxMunicipio.csv").then(source =>{
        
       var filtroxMunicipio = source.filter(item =>{
           return item.MUNICIPIO_RES === '364';
