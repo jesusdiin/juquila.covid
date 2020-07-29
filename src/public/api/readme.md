@@ -5,9 +5,9 @@ Sección donde se descarga la información del y se procesa.
 #### Pasos a seguir
 -------------------
 * Instalar los archivos requeridos por python
-    * ´´´ pip install -r requirements.txt´´´
+    * ``` pip install -r requirements.txt´´´
 * Descargar el archivo comprimido de
-    * ´´´ sh download.sh ´´´
+    * ´´´ sh download.sh ```
 * Extraer el contenido del ZIP y renombrarlo a un nombre más corto
 * Filtrar los datos solo de Juquila y guardarlos en un nuevo archivo CSV
 * Eliminar los archivos generados que ya no se utilicen
@@ -17,10 +17,10 @@ Sección donde se descarga la información del y se procesa.
 --------------------
 Para dejar download en ejecución usar crontab
 
-´´´
+```
 sudo crontab -e
 
-00 20 * * *
+00 20 * * * python3 /home/ubuntu/juquila.covid/src/public/api/main.py
 
-´´´
+```
 
