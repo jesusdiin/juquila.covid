@@ -12,4 +12,24 @@ router.get('/', async (req, res) => {
 	res.json(dataCovid);
 });
 
+router.get('/total', async (req, res) => {
+	const response = await fetch('https://www.juquila.info/api/v1/data');
+	//const response = await fetch('http://localhost:8080/api/v1/data');
+	const dataCovid = await response.json();
+
+			var positivoxMunicipio = dataCovid.filter(item =>{
+				return item.RESULTADO === '1';
+            });
+			res.json(positivoxMunicipio.length);
+			//res.json(positivoxMunicipio.id)
+});
+
+router.get('/44', async (req, res) => {
+			res.json("Error");
+});
+
+router.post('/*', async (req, res) => {
+	res.json("Acceso denegado");
+});
+
 module.exports = router;

@@ -59,9 +59,10 @@ fetch("/api/v1/data")
 							$(tblRow).appendTo("#printCasosSospechosos");
 
 			// Funtion casos de defunciones x Municipio
-			var defunciones = data.filter(item =>{
-				return item.FECHA_DEF < '9999-99-99';
+			var defunciones = positivoxMunicipio.filter(item =>{
+				return item.FECHA_DEF !== '9999-99-99';
 			});
+			console.log(defunciones)
 				console.log("Casos de defunciones: " + Object.keys(defunciones).length);
 					defuncionesStr = JSON.stringify(Object.keys(defunciones).length);
 						var tblRow = "<span>" + defuncionesStr + "</span>"
