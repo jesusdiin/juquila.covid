@@ -1,0 +1,26 @@
+
+<div class="col s12 m3 white">
+    <a class='dropdown-trigger btn' href='#' data-target='dropdownLenguajesGetDATAPositivos'>Lenguaje <i class="material-icons">arrow_drop_down</i> </a>
+
+    <!-- Estructura del botón GET-DATA -->
+    <ul id='dropdownLenguajesGetDATAPositivos' class='dropdown-content'>
+        <li><a href="#!" onclick="getDataPositivosJs();">JavaScript</a></li>
+        <li><a href="#!" onclick="getDataPositivosPython();">Python</a></li>
+    </ul>
+
+    <p><a href="/api/v1/data">GET - /Positivos</a><span> | </span>Muestra todos los datos obtenidos del municipio</p>
+    <p>Para obtner el número total agrega "total" a la URL, Ejemplo:</p>
+    <code>
+        GET - /data/positivos/total
+    </code>
+</div>
+
+        <div class="col s12 m9">
+            <div id="getDataPositivos">
+                <iframe
+                src="https://carbon.now.sh/embed?bg=rgba(171%2C184%2C195%2C0)&t=seti&wt=none&l=javascript&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=13.5px&lh=142%25&si=false&es=2x&wm=false&code=var%2520requestOptions%2520%253D%2520%257B%250A%2520%2520method%253A%2520%27GET%27%252C%250A%2520%2520redirect%253A%2520%27follow%27%252C%250A%257D%250A%250Afetch(%27https%253A%252F%252Fwww.juquila.info%252Fapi%252Fv1%252Fdata%252Fpositivos%27%252C%2520requestOptions)%250A%2520%2520.then((response)%2520%253D%253E%2520response.text())%250A%2520%2520.then((result)%2520%253D%253E%2520console.log(result))%250A%2520%2520.catch((error)%2520%253D%253E%2520console.log(%27error%27%252C%2520error))"
+                style="width: 100%; height: 321px; border:0; transform: scale(1); overflow:hidden;"
+                sandbox="allow-scripts allow-same-origin">
+              </iframe>
+            </div>
+        </div>
