@@ -28,7 +28,7 @@ router.get('/total', async (req, res) => {
     const dataCovid = await response.json();
     
     var positivoxMunicipio = dataCovid.filter(item =>{
-        return item.RESULTADO === '1';
+        return item.RESULTADO_LAB === '1';
     });
 
     var defunciones = positivoxMunicipio.filter(item =>{

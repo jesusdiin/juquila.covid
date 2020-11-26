@@ -33,7 +33,7 @@ fetch("/api/v1/data")
 			*/
 			// Funcion datos positivos x municipio
 			var positivoxMunicipio = data.filter(item =>{
-				return item.RESULTADO === '1';
+				return item.RESULTADO_LAB === '1';
 			});
 				console.log("Casos Positivos: " + Object.keys(positivoxMunicipio).length);
 					casosPositivosStr=JSON.stringify(Object.keys(positivoxMunicipio).length);
@@ -42,7 +42,7 @@ fetch("/api/v1/data")
 			
 			// Funtion casos negativos x Municipio
 			var negativoxMunicipio = data.filter(item =>{
-				return item.RESULTADO === '2';
+				return item.RESULTADO_LAB === '2';
 			});
 				console.log("Casos Negativos: " + Object.keys(negativoxMunicipio).length);
 					casosNegativosStr = JSON.stringify(Object.keys(negativoxMunicipio).length);
@@ -51,7 +51,7 @@ fetch("/api/v1/data")
 
 			// Funtion casos sospechosos x Municipio
 			var sospechosoxMunicipio = data.filter(item =>{
-				return item.RESULTADO === '3';
+				return item.RESULTADO_LAB === '3';
 			});
 				console.log("Casos sospechosos: " + Object.keys(sospechosoxMunicipio).length);
 					casosSospechososStr = JSON.stringify(Object.keys(sospechosoxMunicipio).length);

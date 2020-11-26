@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     
     // Funcion datos positivos x municipio
 			var positivoxMunicipio = dataCovid.filter(item =>{
-				return item.RESULTADO === '1';
+				return item.RESULTADO_LAB === '1';
             });
             res.json(positivoxMunicipio);
 				//console.log("Casos Positivos: " + Object.keys(positivoxMunicipio).length);
@@ -29,7 +29,7 @@ router.get('/total', async (req, res) => {
 	const dataCovid = await response.json();
 
 			var positivoxMunicipio = dataCovid.filter(item =>{
-				return item.RESULTADO === '1';
+				return item.RESULTADO_LAB === '1';
             });
 			res.json(positivoxMunicipio.length);
 			//res.json(positivoxMunicipio.id)
