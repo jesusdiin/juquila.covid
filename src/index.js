@@ -32,7 +32,8 @@ app.use('/api/v1/data/defunciones', require('./api/defunciones'));
 
 // Archivos estaticos
 // Archivos publicos accedidos desde el navegador -img, videos, pdf, etc
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public',express.static(path.join(__dirname, './public')));
 
 
 

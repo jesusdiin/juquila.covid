@@ -12,8 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "csvtojson": "^2.0.10",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "json2csv": "^5.0.6",
     "moment": "^2.27.0",
     "morgan": "^1.9.1",
     "node-fetch": "^2.6.0",
